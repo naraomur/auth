@@ -1,5 +1,5 @@
 package com.example.auth.modules;
 
 public enum ERole {
-    ADMIN, MODERATOR, USER;
+    ROLE_ADMIN, ROLE_MODERATOR, ROLE_USER;
 }
