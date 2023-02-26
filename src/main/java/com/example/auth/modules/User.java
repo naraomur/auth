@@ -1,8 +1,5 @@
 package com.example.auth.modules;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,17 +14,17 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
-    private String pass;
+    private String password;
     private String email;
 
-    @ManyToMany()
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     Set<Role> roles = new HashSet<>();
     public User() {}
-    public User(String name, String pass, String email) {
+    public User(String name, String email, String password) {
         this.username = name;
-        this.pass = pass;
         this.email = email;
+        this.password = password;
     }
     public Long getId() {
         return id;
@@ -54,11 +51,11 @@ public class User {
     }
 
     public String getPassword() {
-        return pass;
+        return password;
     }
 
     public void setPassword(String password) {
-        this.pass = password;
+        this.password = password;
     }
 
     public Set<Role> getRoles() {

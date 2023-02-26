@@ -4,8 +4,8 @@ import java.util.Set;
 
 public class SignupRequest {
     private String username;
+    private String password;
     private String email;
-    private String pass;
     private Set<String> roles;
 
     public String getUsername() {
@@ -24,12 +24,12 @@ public class SignupRequest {
         this.email = email;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String pass) {
+        this.password = pass;
     }
 
     public Set<String> getRoles() {
