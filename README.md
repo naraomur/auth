@@ -9,8 +9,8 @@ Authorization with Spring Security
  - You will need: JDK 11 or later, Postman(or just any regular Browser), PGAdmin(For PostgreSql)
  
  - Address for sign-up and sign-in and sign-up:
-   http://localhost:8080/api/auth/signin
-   http://localhost:8080/api/auth/signup
+   - http://localhost:8080/api/auth/signin
+   - http://localhost:8080/api/auth/signup
  - Request Body for signup:
    ```
    { 
